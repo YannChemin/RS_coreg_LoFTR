@@ -216,8 +216,13 @@ print("gdalwarp -overwrite -tps -t_srs \"EPSG:32733\" temp.jpg "+imgout)
 #rev = ~fwd
 #col, row = ~rev * (x, y)
 ```
-output look like this:
+output looks like this:
 ```python
 [115, 7, 772430.6968421012, 6824967.345454545],
 [195, 9, 773969.4972631513, 6824827.727272727],
+```
+Along with a file called `4_coreg_HyMap2WV3.sh`, coregistering HyMap to a higher spatial resolution WorldView3 image.
+```shell
+gdal_translate -co "WORLDFILE=YES" -gcp 115 7 772430.696842 6824967.345455 -gcp ... HyMap_Haib_Kornia.jpg temp.jpg
+gdalwarp -overwrite -tps -t_srs "EPSG:32733" temp.jpg HyMap_Haib_Kornia_coreg_WV3.tif
 ```
