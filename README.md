@@ -1,4 +1,5 @@
-# RS_coreg_LoFTR
+# RS imagery coregistration using LoFTR
+This set of scripts gets Local Features extracted from a pair of satellite images, a higher spatial resolution satellite image is used as a reference (here WorldView 3) to coregister a lower spatial resolution (HyMap in this example) to it.
 
 Setup the Kornia Environment
 ----------------------------
