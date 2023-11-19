@@ -222,8 +222,9 @@ output looks like this:
 [195, 9, 773969.4972631513, 6824827.727272727],
 ```
 Along with a file called `4_coreg_HyMap2WV3.sh`, coregistering HyMap to a higher spatial resolution WorldView3 image.
-![Image](HyMap_Haib_Kornia_coreg_WV3.jpg)
 ```shell
 gdal_translate -co "WORLDFILE=YES" -gcp 115 7 772430.696842 6824967.345455 -gcp ... HyMap_Haib_Kornia.jpg temp.jpg
 gdalwarp -overwrite -tps -t_srs "EPSG:32733" temp.jpg HyMap_Haib_Kornia_coreg_WV3.tif
 ```
+Output looks like this
+![Image](HyMap_Haib_Kornia_coreg_WV3.tif)
