@@ -221,10 +221,14 @@ output looks like this:
 [115, 7, 772430.6968421012, 6824967.345454545],
 [195, 9, 773969.4972631513, 6824827.727272727],
 ```
-Along with a file called `4_coreg_HyMap2WV3.sh`, coregistering HyMap to a higher spatial resolution WorldView3 image.
+I redirect the run into a file called `4_coreg_HyMap2WV3.sh`, coregistering HyMap to a higher spatial resolution WorldView3 image.
+```shell
+python 3_colrow2xy.py > 4_coreg_HyMap2WV3.sh
+```
+Which contents are summarized here:
 ```shell
 gdal_translate -co "WORLDFILE=YES" -gcp 115 7 772430.696842 6824967.345455 -gcp ... HyMap_Haib_Kornia.jpg temp.jpg
 gdalwarp -overwrite -tps -t_srs "EPSG:32733" temp.jpg HyMap_Haib_Kornia_coreg_WV3.tif
 ```
-Output looks like this
+Output of `4_coreg_HyMap2WV3.sh` looks like this:
 ![Image](HyMap_Haib_Kornia_coreg_WV3.jpg)
