@@ -17,4 +17,8 @@ cd bin
 Setup this code
 ---------------
 ```console
+cd venv_kornia
+git clone https://github.com/YannChemin/RS_coreg_LoFTR.git
+mv RS_coreg_LoFTR script
+cd script/
 ```
