@@ -131,5 +131,7 @@ plt.tight_layout()
 plt.savefig("GCP_coreg_Haib.png")
 plt.show()
 ```
+This creates a matching point set in `gcps.csv` and a plot like this one:
+![Image](GCP_coreg_Haib.png)
 
 
