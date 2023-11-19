@@ -227,4 +227,4 @@ gdal_translate -co "WORLDFILE=YES" -gcp 115 7 772430.696842 6824967.345455 -gcp 
 gdalwarp -overwrite -tps -t_srs "EPSG:32733" temp.jpg HyMap_Haib_Kornia_coreg_WV3.tif
 ```
 Output looks like this
-![Image](HyMap_Haib_Kornia_coreg_WV3.tif)
+![Image](HyMap_Haib_Kornia_coreg_WV3.jpg)
